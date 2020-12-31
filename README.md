@@ -82,6 +82,15 @@
 - 如果国内安装第三方库比较慢，可以使用以下指令进行清华源加速
 `pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/`
 
+- *Linux下命令行方式显示二维码（以Ubuntu为例）*
+
+```bash
+$ sudo apt-get install qrencode zbar-tools # 安装二维码解析和生成的工具，用于读取二维码并在命令行输出。
+```
+
+## 更新优化
+- 由Tony修改更新了linux显示不了二维码的问题， 亲测可用
+
 ## 使用教程  
 #### 1. 推荐Chrome浏览器
 #### 2. 网页扫码登录，或者账号密码登录
@@ -112,12 +121,6 @@
 #### 4.运行main.py 
 根据提示选择相应功能即可。如果出现请扫码登录的提示可查看项目目录下是否存在`qr_code.png`文件,若存在打开图片，并使用京东手机APP扫码登录即可。
 
-- *Linux下命令行方式显示二维码（以Ubuntu为例）*
-
-```bash
-$ sudo apt-get install qrencode zbar-tools # 安装二维码解析和生成的工具，用于读取二维码并在命令行输出。
-$ zbarimg qr_code.png > qrcode.txt && qrencode -r qrcode.txt -o - -t UTF8 # 解析二维码输出到命令行窗口。
-```
 
 #### 5.抢购结果确认 
 抢购是否成功通常在程序开始的一分钟内可见分晓！  
